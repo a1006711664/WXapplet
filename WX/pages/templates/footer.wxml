@@ -1,0 +1,12 @@
+<template name="footer1">
+	<view>这是底部1 = {{text}}</view>
+</template>
+<template name="footer2">
+	<view>这是底部2 = {{text}}</view>
+</template>
+<template name="footer3">
+	<view>这是底部3 = {{text}}</view>
+</template>
+<template name="footer4">
+	<view>这是底部4 = {{text}}</view>
+</template>

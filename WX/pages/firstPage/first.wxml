@@ -1,0 +1,17 @@
+<include src='../templates/header' />
+
+
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover">
+ default 
+</button>
+<button type="primary" bindtap="btnclick" data-title="新闻标题" data-id="100">
+ {{text}}
+</button>
+<view wx:for="{{arrList}}" wx:for-item="itemx">
+{{index+1}} --{{itemx}}
+</view>
+<text class="text">{{text}}</text>
+
+
+<import src='../templates/footer' />
+<template is="footer2" data="{{text:text}}"></template>
