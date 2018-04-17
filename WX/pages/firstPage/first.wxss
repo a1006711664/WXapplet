@@ -3,3 +3,13 @@
 .text{
 	color: red;
 }
+
+input{
+	border:1px solid #ccc;
+	width: 90%;
+	margin:5% auto;
+	padding: 5px;
+}
+.selectData{
+	margin: 5%;
+}

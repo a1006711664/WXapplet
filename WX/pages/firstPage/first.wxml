@@ -1,16 +1,33 @@
 <include src='../templates/header' />
-
-
 <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover">
- default 
+    default
 </button>
-<button type="primary" bindtap="btnclick" data-title="新闻标题" data-id="100">
- {{text}}
-</button>
-<view wx:for="{{arrList}}" wx:for-item="itemx">
-{{index+1}} --{{itemx}}
-</view>
+
+<block wx:for="{{arrList}}" wx:for-item="itemx" wx:key="{{index}}">
+	<view> 
+ {{index+1}} --{{itemx}}
+	</view>	
+   
+</block>
 <text class="text">{{text}}</text>
+
+<view class="text">888898067409909167</view>
+
+<view class="">
+    输入框
+    <input placeholder="暂时只用圆通" bindinput="input"/>
+    <button type="primary" class="selectData" bindtap="btnclick">
+        查询
+    </button>
+</view>
+
+
+  <scroll-view scroll-y style="height: 200px;border:1px solid #ccc;">
+  	<view class="" wx:for="{{expressList}}" wx:key="{{index}}">
+		{{item.context}}
+	</view>
+  </scroll-view>
+
 
 
 <import src='../templates/footer' />
