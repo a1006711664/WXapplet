@@ -60,7 +60,6 @@ App({
                     duration: 2000
                   })
               }else{
-
                 callback(res);
               }
             },
