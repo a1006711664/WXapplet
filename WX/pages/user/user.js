@@ -1,3 +1,4 @@
+var app = getApp();
 // pages/user/user.js
 Page({
 
@@ -5,13 +6,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  username:'--',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(app.appData.userInfo ==  null){
+      // 保留当前页面
+     // wx.navigateTo({url: "../login/login"});
+     //无返回
+     wx.redirectTo({url: "../login/login"});
+    }else{
+      this.setData({username:app.appData.userInfo.username})
+    }
   
   },
 

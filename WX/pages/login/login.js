@@ -1,4 +1,4 @@
-
+var app = getApp();
 
 
 Page({
@@ -7,6 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    username: null,
+    password: null
     
   },
 
@@ -64,5 +66,23 @@ Page({
    */
   onShareAppMessage: function () {
     
-  }
+  },
+  loginBtnClick: function(){
+    app.appData.userInfo = {
+      username:this.data.username,
+      password:this.data.password
+    };
+    wx.redirectTo({url:"../user/user"});
+  },
+  usernameInput: function(e){
+      this.setData({
+        username : e.detail.value,
+      })
+  },
+  passwordInput: function(e){
+      this.setData({
+        password : e.detail.value
+      })
+  },
+
 })
